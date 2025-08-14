@@ -1,0 +1,744 @@
+            .circle-sleep { background: #A17A47; }
+            .circle-learn { background: #7A8DC1; }
+            .circle-play { background: #D4A574; }
+            .circle-grow { background: #6BB8A6; }            <div class="testimonials">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Hatch Kids teaches my daughter to be more independent. She's learning habits that will help her grow up more confidently."</p>
+                    <p class="testimonial-author">— Sarah M., Mom of 2</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"It's preparing my son for life by helping him set his own schedule and stick to it. That's a skill he'll use forever."</p>
+                    <p class="testimonial-author">— Mike R., Dad</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"She's learning healthy bedtime routines that make her feel capable and grown-up. The confidence boost is incredible."</p>
+                    <p class="testimonial-author">— Jennifer L., Parent</p>
+                </div>
+            </div><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hatch Kids - Sleep & Learning Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            background: #FFFFFB;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            background: rgba(255, 255, 251, 0.95);
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 300;
+            color: #0A1A34;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #666;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #0A1A34;
+        }
+
+        .nav-cta {
+            background: #0A1A34;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .nav-cta:hover {
+            background: #152B48;
+            transform: translateY(-1px);
+        }rem;
+            transition: all 0.2s ease;
+        }
+
+        .nav-cta:hover {
+            background: #152B48;
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 120px;
+            background: linear-gradient(135deg, #F5F3F0 0%, #E5DCC5 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            min-height: 500px;
+        }
+
+        .hero-text {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            color: #0A1A34;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .hero-cta {
+            background: #0A1A34;
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 28px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(10, 26, 52, 0.2);
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(10, 26, 52, 0.3);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInRight 0.8s ease-out;
+        }
+
+        .product-showcase {
+            width: 300px;
+            height: 300px;
+            background: #C4A484;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(196, 164, 132, 0.3);
+        }
+
+        .device-mockup {
+            width: 120px;
+            height: 180px;
+            background: #FFFFFB;
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Features Grid */
+        .features-preview {
+            padding: 0 0 80px;
+            background: #FFFFFB;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: -60px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem 1.5rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(229, 220, 197, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: #E5DCC5;
+            border-radius: 12px;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #0A1A34;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-desc {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        /* Main Content Section */
+        .content-section {
+            padding: 100px 0;
+            background: #F8F6F2;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #0A1A34;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        /* Product Showcase */
+        .product-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin: 4rem 0;
+        }
+
+        .product-image {
+            background: #C4A484;
+            border-radius: 24px;
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-mockup {
+            width: 200px;
+            height: 300px;
+            background: #0A1A34;
+            border-radius: 24px;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(10, 26, 52, 0.3);
+        }
+
+        .product-content h3 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #0A1A34;
+            margin-bottom: 1rem;
+        }
+
+        .product-content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .learn-more {
+            color: #0A1A34;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #0A1A34;
+            transition: opacity 0.2s ease;
+        }
+
+        .learn-more:hover {
+            opacity: 0.7;
+        }
+
+        /* Interactive Features */
+        .features-visual {
+            background: #E5DCC5;
+            border-radius: 32px;
+            padding: 4rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .features-title {
+            font-size: 2rem;
+            font-weight: 400;
+            color: #0A1A34;
+            margin-bottom: 3rem;
+        }
+
+        .features-circles {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 3rem 0;
+        }
+
+        .feature-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 500;
+            font-size: 0.9rem;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-circle:hover {
+            transform: scale(1.05);
+        }
+
+        .circle-sleep { background: #A17A47; }
+        .circle-learn { background: #7A8DC1; }
+        .circle-play { background: #D4A574; }
+        .circle-grow { background: #6BB8A6; }
+
+        /* Social Proof */
+        .social-proof {
+            padding: 100px 0;
+            background: #0A1A34;
+            color: white;
+            text-align: center;
+        }
+
+        .proof-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            letter-spacing: -0.02em;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .testimonial-author {
+            font-weight: 500;
+            opacity: 0.8;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 100px 0;
+            background: #F8F6F2;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #0A1A34;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-button {
+            background: #0A1A34;
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 32px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 12px 32px rgba(10, 26, 52, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 40px rgba(10, 26, 52, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #0A1A34;
+            color: white;
+            padding: 60px 0 40px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+        }
+
+        .footer-section h4 {
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .product-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .testimonials {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">Hatch Kids</div>
+            <ul class="nav-links">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#support">Support</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="nav-cta">Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Teaching healthy sleep habits</h1>
+                    <p class="hero-subtitle">Hatch Kids teaches healthy sleep habits that foster independence. Gentle color + sound combos and kid-friendly controls help children master bedtime routines on their own.</p>
+                    <a href="#" class="hero-cta">Build Independence - $129.99</a>
+                </div>
+                <div class="hero-image">
+                    <div class="product-showcase">
+                        <div class="device-mockup"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Preview -->
+    <section class="features-preview">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌈</div>
+                    <h3 class="feature-title">Color + Sound Combos</h3>
+                    <p class="feature-desc">Gentle cues that help kids wind down naturally</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👶</div>
+                    <h3 class="feature-title">Kid-Friendly Controls</h3>
+                    <p class="feature-desc">Simple interface children can master independently</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3 class="feature-title">Engaging Content</h3>
+                    <p class="feature-desc">Sleep-focused stories and sounds that build routine</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3 class="feature-title">Independence Building</h3>
+                    <p class="feature-desc">Empowers kids to handle bedtime tasks on their own</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Healthy sleep habits that foster independence</h2>
+                <p class="section-subtitle">Every child can learn to love bedtime. Hatch Kids uses gentle color + sound combinations and engaging content to help kids master their nighttime routine—building confidence and independence that lasts a lifetime.</p>
+            </div>
+
+            <!-- Kid-Friendly Design Grid -->
+            <div class="kid-design-section">
+                <div class="design-grid">
+                    <div class="design-card design-card-large">
+                        <div class="design-card-content">
+                            <h3 class="card-title">Designed for little hands and growing minds</h3>
+                            <p class="card-description">Every button, icon, and interaction is crafted with children in mind. Simple enough for a 4-year-old, sophisticated enough for a 12-year-old.</p>
+                        </div>
+                    </div>
+                    <div class="design-card design-card-1">
+                        <div class="design-card-content">
+                            <div class="card-feature">Big, Easy Buttons</div>
+                            <div class="card-subtitle">No tiny controls or complex menus—designed for confident touches</div>
+                        </div>
+                    </div>
+                    <div class="design-card design-card-2">
+                        <div class="design-card-content">
+                            <div class="card-feature">Voice Control</div>
+                            <div class="card-subtitle">"Hatch, it's bedtime" - simple voice commands kids love using</div>
+                        </div>
+                    </div>
+                    <div class="design-card design-card-3">
+                        <div class="design-card-content">
+                            <div class="card-feature">Kid-Safe Design</div>
+                            <div class="card-subtitle">Durable, child-friendly materials that can handle daily use</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Library -->
+            <div class="product-section">
+                <div class="product-content">
+                    <h3>Content that grows with your child</h3>
+                    <p>Age-appropriate stories, sounds, and activities designed to build healthy habits. From toddler wind-down tales to pre-teen mindfulness exercises—every piece of content teaches independence and self-care.</p>
+                    <a href="#" class="learn-more">Browse content library →</a>
+                </div>
+                <div class="product-image">
+                    <div class="app-mockup"></div>
+                </div>
+            </div>
+
+            <!-- Interactive Features -->
+            <div class="features-visual">
+                <h3 class="features-title">Building habits that create independent sleepers</h3>
+                <div class="features-circles">
+                    <div class="feature-circle circle-sleep">
+                        <span>Wind Down</span>
+                        <span>Gentle cues</span>
+                    </div>
+                    <div class="feature-circle circle-learn">
+                        <span>Fall Asleep</span>
+                        <span>Focused content</span>
+                    </div>
+                    <div class="feature-circle circle-play">
+                        <span>Routine</span>
+                        <span>Color + sound</span>
+                    </div>
+                    <div class="feature-circle circle-grow">
+                        <span>Kid Power</span>
+                        <span>Independence</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <h2 class="proof-title">Trusted by 2 million growing families</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Finally, a device that grows with my kids. The learning content adapts perfectly to each stage."</p>
+                    <p class="testimonial-author">— Sarah M., Mom of 3</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"Bedtime battles are over. My 6-year-old actually asks to go to bed now!"</p>
+                    <p class="testimonial-author">— Mike R., Dad</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"The insights help me understand my child's development in ways I never could before."</p>
+                    <p class="testimonial-author">— Jennifer L., Parent</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2 class="cta-title">Give your child independence that lasts a lifetime</h2>
+            <p class="cta-subtitle">Help them build healthy habits and confidence with Hatch Kids. Starting at $129.99.</p>
+            <a href="#" class="cta-button">Get Hatch Kids - $129.99</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <a href="#">Hatch Kids Device</a>
+                    <a href="#">Mobile App</a>
+                    <a href="#">Content Library</a>
+                    <a href="#">Accessories</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">User Guide</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Warranty</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <a href="#">About Hatch</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Press</a>
+                    <a href="#">Investors</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <a href="#">Newsletter</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
