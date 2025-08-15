@@ -90,23 +90,34 @@
             transform: translateY(-1px);
         }
 
-      /* Hero Section */
+      /* Hero Section - Full Bleed with Background Image */
 .hero {
-    padding: 80px 0 120px;
-    background: linear-gradient(135deg, #F5F3F0 0%, #E5DCC5 100%);
+    min-height: 100vh;
+    background: #000;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
     position: relative;
     overflow: hidden;
+    padding: 0;
 }
 
 .hero-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
     align-items: center;
-    min-height: 500px;
+    min-height: 80vh;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .hero-text {
+    max-width: 550px;
     animation: fadeInUp 0.8s ease-out;
 }
 
@@ -114,67 +125,18 @@
     font-size: 3.5rem;
     font-weight: 300;
     margin-bottom: 1.5rem;
-    color: #0A1A34;
+    color: white;
     line-height: 1.1;
     letter-spacing: -0.02em;
 }
 
 .hero-subtitle {
     font-size: 1.2rem;
-    color: #666;
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 2.5rem;
     font-weight: 400;
     line-height: 1.5;
 }
-
-.hero-cta {
-    background: #0A1A34;
-    color: white;
-    padding: 16px 32px;
-    border: none;
-    border-radius: 28px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 24px rgba(10, 26, 52, 0.2);
-}
-
-.hero-cta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 32px rgba(10, 26, 52, 0.3);
-}
-
-.hero-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: fadeInRight 0.8s ease-out;
-}
-
-.product-showcase {
-    width: 300px;
-    height: 300px;
-    background: #C4A484;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    box-shadow: 0 20px 60px rgba(196, 164, 132, 0.3);
-}
-
-.device-mockup {
-    width: 120px;
-    height: 180px;
-    background: #FFFFFB;
-    border-radius: 20px;
-    position: relative;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-}
-
         /* Features Grid */
         .features-preview {
             padding: 0 0 80px;
@@ -538,23 +500,16 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Build healthy sleep habits</h1>
-                    <p class="hero-subtitle">Hatch Kids teaches healthy sleep habits that foster independence. Sound & color cues, purpose-build content and kid-friendly controls help children build independence at bedtime..</p>
-                    <a href="#" class="hero-cta">Be the first to know</a>
-                </div>
-                <div class="hero-image">
-                    <div class="product-showcase">
-                        <div class="device-mockup"></div>
-                    </div>
-                </div>
-            </div>
+   <!-- Hero Section - Full Bleed Background -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>Build healthy sleep habits</h1>
+            <p class="hero-subtitle">Hatch Kids teaches healthy sleep habits that foster independence. Sound & color cues, purpose-built content and kid-friendly controls help children build independence at bedtime.</p>
+            <a href="#" class="hero-cta">Be the first to know</a>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Features Preview -->
     <section class="features-preview">
