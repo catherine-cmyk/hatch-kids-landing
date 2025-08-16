@@ -528,27 +528,26 @@
     border-radius: 24px;
     overflow: hidden;
     transition: transform 0.3s ease;
+    position: relative;
 }
 
 .content-card:hover {
     transform: translateY(-8px);
 }
 
-.content-card-left,
-.content-card-right {
-    width: 200px;
-    height: 280px;
-}
-
-.content-card-center {
-    width: 280px;
-    height: 380px;
-}
-
-.content-placeholder {
+.content-card img {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #4A6FA5 0%, #2E4A73 100%);
+    object-fit: cover;
+}
+
+.content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(74, 111, 165, 0.8) 0%, rgba(46, 71, 115, 0.9) 100%);
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -556,12 +555,11 @@
     font-weight: 500;
     font-size: 1rem;
     text-align: left;
-    position: relative;
     padding: 24px;
 }
 
-.content-main {
-    background: linear-gradient(135deg, #5B7BB8 0%, #3A5A88 100%);
+.content-overlay-main {
+    background: linear-gradient(135deg, rgba(91, 123, 184, 0.8) 0%, rgba(58, 90, 136, 0.9) 100%);
     font-size: 1.1rem;
 }
         /* Product Showcase */
@@ -942,30 +940,26 @@
 </div>
 
           <!-- Content Library -->
-<div class="container">
-    <div class="content-library-section">
-        <div class="content-header">
-            <h3 class="content-title">Turn up for sweet dreams</h3>
-            <p class="content-subtitle">Age-appropriate stories, sounds and music designed to help your kid find rest. Some extra line here that will be about this long lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.</p>
-        </div>
-        
-        <div class="content-gallery">
-        <div class="content-card content-card-left">
-            <div class="content-placeholder">
-                <span>Your 0-3 month sleep guide</span>
-            </div>
-        </div>
-        <div class="content-card content-card-center">
-            <div class="content-placeholder content-main">
-                <span>Your 4-5 month sleep guide</span>
-            </div>
-        </div>
-        <div class="content-card content-card-right">
-            <div class="content-placeholder">
-                <span>Your 6-12 month sleep guide</span>
-            </div>
+<div class="content-gallery">
+    <div class="content-card content-card-left">
+        <img src="your-0-3-month-image.jpg" alt="0-3 month sleep guide">
+        <div class="content-overlay">
+            <span>Your 0-3 month sleep guide</span>
         </div>
     </div>
+    <div class="content-card content-card-center">
+        <img src="your-4-5-month-image.jpg" alt="4-5 month sleep guide">
+        <div class="content-overlay content-overlay-main">
+            <span>Your 4-5 month sleep guide</span>
+        </div>
+    </div>
+    <div class="content-card content-card-right">
+        <img src="your-6-12-month-image.jpg" alt="6-12 month sleep guide">
+        <div class="content-overlay">
+            <span>Your 6-12 month sleep guide</span>
+        </div>
+    </div>
+</div>
 </div>
 
             <!-- Interactive Features -->
