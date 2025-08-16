@@ -562,6 +562,16 @@
     background: linear-gradient(135deg, rgba(91, 123, 184, 0.8) 0%, rgba(58, 90, 136, 0.9) 100%);
     font-size: 1.1rem;
 }
+        .content-card-left,
+.content-card-right {
+    width: 200px;
+    height: 280px;
+}
+
+.content-card-center {
+    width: 280px;
+    height: 380px;
+}
         /* Product Showcase */
         .product-section {
             display: grid;
@@ -940,26 +950,34 @@
 </div>
 
           <!-- Content Library -->
-<div class="content-gallery">
-    <div class="content-card content-card-left">
-        <img src="your-0-3-month-image.jpg" alt="0-3 month sleep guide">
-        <div class="content-overlay">
-            <span>Your 0-3 month sleep guide</span>
+<div class="container">
+    <div class="content-library-section">
+        <div class="content-header">
+            <h3 class="content-title">Turn up for sweet dreams</h3>
+            <p class="content-subtitle">Age-appropriate stories, sounds and music designed to help your kid find rest. Some extra line here that will be about this long lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.</p>
+        </div>
+        
+        <div class="content-gallery">
+            <div class="content-card content-card-left">
+                <img src="your-0-3-month-image.jpg" alt="0-3 month sleep guide">
+                <div class="content-overlay">
+                    <span>Your 0-3 month sleep guide</span>
+                </div>
+            </div>
+            <div class="content-card content-card-center">
+                <img src="lulu.png" alt="Lulus Late Night">
+                <div class="content-overlay content-overlay-main">
+                    <span>Lulu's Late Night</span>
+                </div>
+            </div>
+            <div class="content-card content-card-right">
+                <img src="your-6-12-month-image.jpg" alt="6-12 month sleep guide">
+                <div class="content-overlay">
+                    <span>Your 6-12 month sleep guide</span>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="content-card content-card-center">
-        <img src="lulu.png" alt="Lulus Late Night">
-        <div class="content-overlay content-overlay-main">
-            <span>Lulu's Late Night</span>
-        </div>
-    </div>
-    <div class="content-card content-card-right">
-        <img src="your-6-12-month-image.jpg" alt="6-12 month sleep guide">
-        <div class="content-overlay">
-            <span>Your 6-12 month sleep guide</span>
-        </div>
-    </div>
-</div>
 </div>
 
             <!-- Interactive Features -->
