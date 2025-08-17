@@ -188,18 +188,24 @@
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
         }
 
-        .feature-icon {
-            width: 48px;
-            height: 48px;
-            background: #F1EBE1;
-            border-radius: 12px;
-            margin: 0 auto 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-        }
+       .feature-icon {
+    width: 48px;
+    height: 48px;
+    background: #F1EBE1;
+    border-radius: 12px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
 
+.feature-icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+        
         .feature-title {
             font-size: 1rem;
             font-weight: 600;
@@ -835,31 +841,39 @@
 
     <!-- Features Preview -->
     <section class="features-preview">
-        <div class="container">
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🌈</div>
-                    <h3 class="feature-title">Build routines</h3>
-                    <p class="feature-desc">Sound & light cues help kids move through their bedtime and morning routines</p>
+    <div class="container">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="routine.png" alt="Build routines icon">
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👶</div>
-                    <h3 class="feature-title">Kid-friendly controls</h3>
-                    <p class="feature-desc">Simple controls that children can master independently</p>
+                <h3 class="feature-title">Build routines</h3>
+                <p class="feature-desc">Sound & light cues help kids move through their bedtime and morning routines</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="controls-icon.png" alt="Kid-friendly controls icon">
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📖</div>
-                    <h3 class="feature-title">Expertly crafted content</h3>
-                    <p class="feature-desc">Stories, songs and sounds that engage and soothe little minds at bedtime</p>
+                <h3 class="feature-title">Kid-friendly controls</h3>
+                <p class="feature-desc">Simple controls that children can master independently</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="content-icon.png" alt="Expertly crafted content icon">
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⭐</div>
-                    <h3 class="feature-title">Foster indepedence</h3>
-                    <p class="feature-desc">Empowers kids to handle more of bedtime and wake up on their own</p>
+                <h3 class="feature-title">Expertly crafted content</h3>
+                <p class="feature-desc">Stories, songs and sounds that engage and soothe little minds at bedtime</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="independence-icon.png" alt="Foster independence icon">
                 </div>
+                <h3 class="feature-title">Foster independence</h3>
+                <p class="feature-desc">Empowers kids to handle more of bedtime and wake up on their own</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Main Content -->
 <div class="section-header">
